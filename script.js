@@ -5,7 +5,7 @@ const { shell, ipcRenderer } = require('electron');
 // Bu linki kendi sunucunuzdaki bir config.json adresi ile değiştirebilirsiniz.
 // Örneğin: const CONFIG_URL = 'https://sirketiniz.com/api/omg-config.json';
 // Şimdilik test amaçlı yerel klasördeki config.json dosyasını okuyoruz.
-const CONFIG_URL = 'config.json';
+const CONFIG_URL = 'https://raw.githubusercontent.com/omgsmilelab-58/omg-buton-guncellemeleri/main/config.json';
 // =========================================================================
 
 document.addEventListener('DOMContentLoaded', async () => {
