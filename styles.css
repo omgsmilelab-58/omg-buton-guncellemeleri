@@ -1,0 +1,259 @@
+:root {
+    --bg-color: transparent;
+    --text-primary: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.launcher-container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+/* YENİ TASARIM (Neumorphism Share Button - 4 Item) */
+.buttons {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: fit-content;
+  width: fit-content;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.buttons:hover {
+  padding: 100px;
+}
+
+.buttons:hover .button {
+  box-shadow: 5px 5px 12px #cacaca, -5px -5px 12px #ffffff;
+  translate: var(--hover-x, 0) var(--hover-y, 0);
+}
+
+.main-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 5.5em;
+  height: 5.5em;
+  border: none;
+  border-radius: 1em;
+  background: #ddd;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+  cursor: pointer;
+  z-index: 100;
+}
+
+.heart {
+  width: 2.4em;
+  height: 4.3em;
+  border: none;
+  border-radius: 10em;
+  pointer-events: none;
+}
+
+.heart_left {
+  background-color: rgb(252, 102, 56);
+  box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+  transform: rotate(-38deg);
+  margin-right: -16px;
+  z-index: 2;
+}
+
+.heart_right {
+  background-color: rgb(199, 81, 45);
+  box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+  transform: rotate(38deg);
+  z-index: 1;
+}
+
+.main-button:hover > .heart_left {
+  animation: like 450ms ease forwards;
+}
+
+@keyframes like {
+  0% { margin-right: -16px; }
+  25% { transform: rotate(0deg); margin-right: -32px; }
+  50% { transform: rotate(-38deg); margin-right: -16px; }
+  75% { transform: rotate(0deg); margin-right: -32px; }
+  100% { transform: rotate(-38deg); }
+}
+
+.main-button:hover > .heart_right {
+  animation: loke 450ms ease;
+}
+
+@keyframes loke {
+  25% { transform: rotate(0deg); box-shadow: none; }
+  50% { transform: rotate(38deg); }
+  75% { transform: rotate(0deg); }
+  100% { transform: rotate(38deg); }
+}
+
+.orange_effect,
+.white_effect {
+  position: absolute;
+  inset: 40.5%;
+  border: none;
+  border-radius: .2em;
+  width: 1em;
+  height: 1em;
+  scale: 1;
+  opacity: 1;
+}
+
+.orange_effect {
+  background: rgba(255, 102, 55, .3);
+  transition: scale 250ms linear, opacity 500ms linear 270ms;
+}
+
+.main-button:hover > .orange_effect {
+  scale: 6;
+  opacity: 0;
+}
+
+.white_effect {
+  background: rgba(255, 134, 42, 0.3);
+  transition: scale 280ms linear 200ms, opacity 500ms linear 270ms;
+}
+
+.main-button:hover > .white_effect {
+  scale: 6;
+  opacity: 0;
+}
+
+.like {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 5em;
+  min-height: 2em;
+  background: #e5e5e5;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+  font-size: 15px;
+  letter-spacing: 3px;
+  border: none;
+  border-radius: .65em;
+  pointer-events: none;
+  scale: 0;
+  opacity: 0;
+  z-index: 10;
+}
+
+.main-button:focus .like, .main-button:active .like {
+  animation: pop-up 400ms ease forwards;
+}
+
+@keyframes pop-up {
+  0% { top: 0; }
+  80%, 100% { top: -50px; scale: 1; opacity: 1; }
+}
+
+.omg-text-heart {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(-50deg, var(--grad1), var(--grad2), var(--grad1));
+  background-size: 250%;
+  background-position: left;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  -webkit-app-region: no-drag;
+}
+
+.button:hover {
+  background-position: right;
+  transition-duration: 0.5s;
+}
+
+.logoIcon {
+  color: white;
+  font-size: 24px;
+}
+
+.tooltip {
+  position: absolute;
+  top: -20px;
+  opacity: 0;
+  background: linear-gradient(to right, var(--grad1), var(--grad2));
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.2s;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(45deg, var(--grad1), var(--grad2));
+  background-size: 1000%;
+  background-position: center;
+  transform: rotate(45deg);
+  bottom: -15%;
+  transition-duration: 0.3s;
+}
+
+.button:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  transition-duration: 0.3s;
+}
+
+.button:hover .tooltip.tooltip-bottom {
+  top: 65px;
+}
+
+.tooltip.tooltip-bottom::before {
+  bottom: auto;
+  top: -15%;
+}
+
+
