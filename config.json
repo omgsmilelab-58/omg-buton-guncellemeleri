@@ -1,0 +1,40 @@
+{
+  "buttons": [
+    {
+      "name": "ERP",
+      "url": "https://localhost:8501",
+      "icon": "analytics",
+      "color": "#3b82f6"
+    },
+    {
+      "name": "CRM",
+      "url": "https://localhost:8502",
+      "icon": "group",
+      "color": "#ef4444"
+    },
+    {
+      "name": "Üretim",
+      "url": "https://localhost:8505",
+      "icon": "precision_manufacturing",
+      "color": "#f97316"
+    },
+    {
+      "name": "Finans",
+      "url": "https://localhost:8503",
+      "icon": "account_balance_wallet",
+      "color": "#22c55e"
+    },
+    {
+      "name": "İK",
+      "url": "https://localhost:8504",
+      "icon": "badge",
+      "color": "#a855f7"
+    },
+    {
+      "name": "Lojistik",
+      "url": "https://localhost:8506",
+      "icon": "local_shipping",
+      "color": "#06b6d4"
+    }
+  ]
+}
