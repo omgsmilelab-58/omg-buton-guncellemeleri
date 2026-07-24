@@ -1,37 +1,37 @@
 {
   "buttons": [
     {
-      "name": "ERP",
-      "url": "https://localhost:8501",
+      "name": "Tasarım Platformu",
+      "url": "https://smile-center-785662818531.europe-west4.run.app",
       "icon": "analytics",
       "color": "#3b82f6"
     },
     {
-      "name": "CRM",
-      "url": "https://localhost:8502",
+      "name": "Laboratuvar Yönetimi",
+      "url": "https://omg-smile-app-1065645959336.europe-west3.run.app/",
       "icon": "group",
       "color": "#ef4444"
     },
     {
-      "name": "Üretim",
-      "url": "https://localhost:8505",
+      "name": "Klinik Ajanda",
+      "url": "https://www.klinikajanda.com",
       "icon": "precision_manufacturing",
       "color": "#f97316"
     },
     {
-      "name": "Finans",
-      "url": "https://localhost:8503",
+      "name": "Omg Web",
+      "url": "www.omgsmile.com.tr",
       "icon": "account_balance_wallet",
       "color": "#22c55e"
     },
     {
-      "name": "İK",
-      "url": "https://localhost:8504",
+      "name": "Blur Green Web",
+      "url": "bluegreensmile.com",
       "icon": "badge",
       "color": "#a855f7"
     },
     {
-      "name": "Lojistik",
+      "name": "Blue Green Shop",
       "url": "https://localhost:8506",
       "icon": "local_shipping",
       "color": "#06b6d4"
